@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Caesar Cipher | Encryption &amp; Decryption</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/caesar.js"></script>
+</head>
+<body>
+	<nav class="site-nav">
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="caesar-cipher.html" aria-current="page">Caesar Cipher</a></li>
+			<li><a href="playfair.html">Playfair Cipher</a></li>
+			<li><a href="DES.html">DES / Triple DES</a></li>
+		</ul>
+	</nav>
+
+	<main>
+		<h1>Caesar Cipher</h1>
+		<p class="intro">Each letter is replaced by the letter a fixed number of places (the shift) further along the alphabet, wrapping round from Z to A. Other characters stay as they are. Decryption shifts back by the same amount.</p>
+
+		<form action="#" onsubmit="return false;">
+			<div class="field">
+				<label for="text">Text</label>
+				<textarea id="text" rows="8">JACKDAWS LOVE MY BIG SPHINX OF QUARTZ.</textarea>
+			</div>
+			<div class="field">
+				<label for="shift">Shift (0 to 25)</label>
+				<input type="number" id="shift" value="13" min="0" max="25">
+			</div>
+			<div class="buttons">
+				<button type="button" onclick="doCrypt(false);">Encrypt</button>
+				<button type="button" onclick="doCrypt(true);">Decrypt</button>
+			</div>
+		</form>
+	</main>
+</body>
+</html>
