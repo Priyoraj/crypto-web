@@ -1,0 +1,237 @@
+/* Shared look for all pages */
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	min-height: 100vh;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
+	color: #1d2a33;
+	background: linear-gradient(to left, #00d2ff, #85dcba);
+}
+
+/* ---------- navigation buttons ---------- */
+
+.site-nav {
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 20px 16px 0;
+}
+
+.site-nav ul {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.site-nav a {
+	display: block;
+	min-width: 150px;
+	padding: 0 16px;
+	border-radius: 10px;
+	background: #ebf0f0;
+	color: #000;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 17px;
+	line-height: 48px;
+	text-align: center;
+	text-decoration: none;
+}
+
+.site-nav a:hover,
+.site-nav a:focus-visible,
+.site-nav a[aria-current="page"] {
+	background: #535f61;
+	color: #fff;
+}
+
+/* ---------- page content ---------- */
+
+main {
+	width: calc(100% - 32px);
+	max-width: 928px;
+	margin: 20px auto 40px;
+	padding: 24px 28px;
+	border-radius: 10px;
+	background: #fff;
+	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+h1 {
+	margin: 0 0 12px;
+	color: #1546c0;
+	font-size: 30px;
+	line-height: 1.2;
+}
+
+h2 {
+	margin: 0 0 8px;
+	font-size: 18px;
+}
+
+.intro {
+	margin: 0 0 20px;
+	color: #44545e;
+}
+
+.cipher-list {
+	padding-left: 20px;
+}
+
+.cipher-list li {
+	margin-bottom: 8px;
+}
+
+/* ---------- forms ---------- */
+
+.field {
+	margin: 0 0 16px;
+}
+
+.field > label {
+	display: block;
+	margin-bottom: 4px;
+	font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
+	width: 100%;
+	padding: 8px 10px;
+	border: 1px solid #b8c4ca;
+	border-radius: 4px;
+	font: inherit;
+	color: inherit;
+}
+
+input[type="number"] {
+	width: 8em;
+}
+
+textarea {
+	resize: vertical;
+}
+
+.mono {
+	font-family: Consolas, "Courier New", monospace;
+}
+
+#details {
+	font-size: 14px;
+}
+
+.choices {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 4px 20px;
+	margin-top: 6px;
+}
+
+.buttons {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	margin: 0 0 20px;
+}
+
+button {
+	padding: 8px 18px;
+	border: 0;
+	border-radius: 6px;
+	background: #1546c0;
+	color: #fff;
+	font: inherit;
+	cursor: pointer;
+}
+
+button:hover {
+	background: #0f3796;
+}
+
+button:focus-visible,
+.site-nav a:focus-visible {
+	outline: 3px solid #0b7a99;
+	outline-offset: 2px;
+}
+
+.error {
+	color: #b42318;
+	font-weight: bold;
+}
+
+/* ---------- Playfair ---------- */
+
+.playfair-layout {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 24px 40px;
+	margin-bottom: 20px;
+}
+
+.playfair-layout > section {
+	flex: 1 1 280px;
+}
+
+.playfair-layout > section:first-child {
+	flex: 0 0 auto;
+}
+
+.key-square {
+	border-collapse: collapse;
+}
+
+.key-square td {
+	width: 46px;
+	height: 46px;
+	border: 1px solid #b8c4ca;
+	font-family: Consolas, "Courier New", monospace;
+	font-size: 18px;
+	font-weight: bold;
+	text-align: center;
+}
+
+#output dt {
+	margin-top: 10px;
+	font-weight: bold;
+}
+
+#output dd {
+	margin: 2px 0 0;
+	font-size: 18px;
+	letter-spacing: 0.04em;
+	overflow-wrap: anywhere;
+}
+
+.rules summary {
+	font-weight: bold;
+	cursor: pointer;
+}
+
+/* ---------- small screens ---------- */
+
+@media (max-width: 600px) {
+	.site-nav li {
+		flex: 1 1 40%;
+	}
+
+	.site-nav a {
+		min-width: 0;
+		font-size: 15px;
+	}
+
+	main {
+		padding: 16px;
+	}
+
+	h1 {
+		font-size: 24px;
+	}
+}
